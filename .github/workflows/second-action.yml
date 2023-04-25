@@ -1,15 +1,15 @@
 name: Second Workflow
 on:
-    push:
-      jobs:
-        first-job:
-          runs-on:
-          steps:
-            - name: Get code
-              uses: actions/checkout@v3
-            - name: install NodeJs
-              uses: action/setup-node@v3
-              with:
-                node-version: '18'
-            - name: Install dependencies
-              run: npm install
+    push
+jobs:
+  first-job:
+    runs-on:
+      steps:
+        - name: Get code
+          uses: actions/checkout@v3
+        - name: install NodeJs
+          uses: action/setup-node@v3
+          with:
+            node-version: '18'
+        - name: Install dependencies
+          run: npm install
